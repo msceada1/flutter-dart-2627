@@ -12,14 +12,21 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp( //Material Design styles
       home: Scaffold(
-        appBar: AppBar( //Creamos un barra horizontal superior
-          title: Text('Profile'),
-          backgroundColor: Colors.green[500],
-        ),
-        body: Center(
-          child: Image.asset("assets/images/iron_man_donut.jpg"),
-        ),
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.green,
+        body: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Container(color: Colors.red, width: 100,),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(height: 100, width: 100, color: Colors.yellow[200],),
+                Container(height: 100, width: 100, color: Colors.yellowAccent[200] ,)
+              ],
+            ),
+            Container(color: Colors.blue, width: 100,)
+          ],
+        )
       ),
     );
   }
