@@ -19,17 +19,40 @@ class MyApp extends StatelessWidget {
         body: SafeArea(
           bottom: false, // no llega a cubrir los iconos de arriba
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                width: 100,
-                height: 100,
-                color: Colors.white,
-                alignment: Alignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [ //la columna tiene un array de hijos
+              Center(
                 child: Container(
-                  width: 20,
-                  height: 20,
+                  width: 100,
+                  height: 100,
                   color: Colors.black,
+                  alignment: Alignment.center,
+                  child: Container(
+                    width: 20,
+                    height: 20,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+              Center(
+                child: Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.black,
+                  alignment: Alignment.topLeft,
+                  child: Row(
+                    children: [
+                      Column(
+                        children: [
+                          Container(
+                            width: 20,
+                            height: 20,
+                            color: Colors.white,
+                          )
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],
