@@ -10,23 +10,43 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp( //Material Design styles
+    return  MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.green,
-        body: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Container(color: Colors.red, width: 100,),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(height: 100, width: 100, color: Colors.yellow[200],),
-                Container(height: 100, width: 100, color: Colors.yellowAccent[200] ,)
-              ],
-            ),
-            Container(color: Colors.blue, width: 100,)
-          ],
-        )
+        body: SafeArea(
+          bottom: false,
+          child: Column(
+            children: [
+              Expanded(flex: 2, child: Container(color: Colors.red)),
+              Expanded(
+                flex: 1,
+                child: Row(
+                  children: [
+                    Expanded(flex: 2, child: Container(color: Colors.blue)),
+                    Expanded(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            width: 100,
+                            height: 100,
+                            color: Colors.pink,
+                          ),
+                          Container(
+                            width: 100,
+                            height: 100,
+                            color: Colors.orange,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
