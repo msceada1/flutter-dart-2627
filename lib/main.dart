@@ -11,20 +11,26 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+      //MaterialApp es la casa
+      debugShowCheckedModeBanner: false, //se quita el boton de debug
       home: Scaffold(
-        backgroundColor: Colors.green,
+        //plano
+        backgroundColor: Colors.red, //le digo al plano que el fondo sea rojo
         body: SafeArea(
-          bottom: false,
+          bottom: false, // no llega a cubrir los iconos de arriba
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
                 width: 100,
                 height: 100,
                 color: Colors.white,
-                alignment: Alignment.bottomLeft,
-                child: Text('RRR'),
+                alignment: Alignment.center,
+                child: Container(
+                  width: 20,
+                  height: 20,
+                  color: Colors.black,
+                ),
               ),
             ],
           ),
