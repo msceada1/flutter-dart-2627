@@ -7,8 +7,9 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
+  @override
   Widget build(BuildContext context) {
+    // TODO: implement build
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
@@ -17,26 +18,30 @@ class MyApp extends StatelessWidget {
             children: [
               Expanded(
                 child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     Expanded(
-                      child: Column(
-                        children: [
-                          Expanded(
-                            flex: 1,
-                            child: Container(
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                  image: AssetImage('assets/images/dog.jpg'),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
+                      flex: 1,
+                      child: Container(
+                        child: Image.asset('assets/images/dog.jpg'),
                       ),
                     ),
-                    Expanded(child: Column(
-
-                    )),
+                    Expanded(flex: 4, child: Container(color: Colors.yellow)),
+                  ],
+                ),
+              ),
+              Expanded(
+                child: Container(
+                  child: Image.asset('assets/images/puente.jpg'),
+                ),
+              ),
+              Expanded(
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Expanded(child: Container(color: Colors.blue)),
+                    Expanded(child: Container(color: Colors.grey)),
+                    Expanded(child: Container(color: Colors.greenAccent)),
                   ],
                 ),
               ),
