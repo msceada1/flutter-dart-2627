@@ -79,6 +79,38 @@ class MyApp extends StatelessWidget {
                     ],
                   ),
                 ),
+              ),
+              Center(
+                child: Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.black,
+                  alignment: Alignment.topLeft,
+                  child: Row(
+                    children: [
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            width: 20,
+                            height: 20,
+                            color: Colors.black,
+                          ),
+                          Container(
+                            width: 20,
+                            height: 20,
+                            color: Colors.black,
+                          )
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Container(width: 20, height: 20, color: Colors.black)
+                        ],
+                      )
+                    ],
+                  ),
+                ),
               )
             ],
           ),
