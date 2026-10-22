@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         body: SafeArea(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Expanded(
                 child: Row(
@@ -31,17 +32,18 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               Expanded(
+                flex: 3,
                 child: Container(
-                  child: Image.asset('assets/images/puente.jpg'),
+                  child: Image.asset('assets/images/puente.jpg', fit: BoxFit.cover,),
                 ),
               ),
               Expanded(
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    Expanded(child: Container(color: Colors.blue)),
+                    Expanded(child: Container(color: Colors.blue,alignment: .center ,child: Text("boton 1"),)),
                     Expanded(child: Container(color: Colors.grey)),
-                    Expanded(child: Container(color: Colors.greenAccent)),
+                    Expanded(child: Container(color: Colors.greenAccent, child: Center(child: Text("boton 3")),)),
                   ],
                 ),
               ),
