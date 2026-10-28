@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class ColorDetailScreen extends StatelessWidget {
-  Color _backgroundColor;
+  Color backgroundColor;
 
-  ColorDetailScreen({required this._backgroundColor, super.key});
+  ColorDetailScreen({required this.backgroundColor, super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: _backgroundColor,
+      backgroundColor: backgroundColor,
       body: Center(
         child: TextButton(
           onPressed: () => Navigator.pop(context),
