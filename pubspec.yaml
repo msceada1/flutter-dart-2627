@@ -64,6 +64,10 @@ flutter:
     - assets/images/dog.jpg
     - assets/images/puente.jpg
     - assets/images/iron_man_donut.jpg
+    - assets/images/gamba_blanca.jpg
+    - assets/images/choco.jpg
+    - assets/images/sardina.jpg
+    - assets/images/atun_rojo.jpg
 
   # An image assets can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
