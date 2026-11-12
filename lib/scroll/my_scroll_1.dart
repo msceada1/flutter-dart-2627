@@ -37,11 +37,11 @@ class _MyScroll1State extends State<MyScroll1> {
               controller: _scrollController,
               child: Column(
                 children: [
-                  Container(color: Colors.green, height: 200),
+                  Container(color: Colors.green, height: 100),
                   Container(color: Colors.red, height: 200),
-                  Container(color: Colors.blue, height: 200),
-                  Container(color: Colors.yellow, height: 200),
-                  Container(color: Colors.deepPurpleAccent, height: 200),
+                  Container(color: Colors.blue, height: 300),
+                  Container(color: Colors.yellow, height: 400),
+                  Container(color: Colors.deepPurpleAccent, height: 500),
                 ],
               ),
             ),
