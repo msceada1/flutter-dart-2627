@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:introduccion_flutter/scroll/top_buttons.dart';
 
 void main() {
-  runApp(const MaterialApp(home: MyScroll1()));
+  runApp(const MaterialApp(home: MyScroll1(), debugShowCheckedModeBanner: false,));
 }
 
 class MyScroll1 extends StatefulWidget {
@@ -31,17 +31,16 @@ class _MyScroll1State extends State<MyScroll1> {
       appBar: AppBar(title: Text('Color Me'), centerTitle: true),
       body: Column(
         children: [
-
           Expanded(
             child: SingleChildScrollView(
               controller: _scrollController,
               child: Column(
                 children: [
-                  Container(color: Colors.green, height: 100),
+                  Container(color: Colors.green, height: 200),
                   Container(color: Colors.red, height: 200),
-                  Container(color: Colors.blue, height: 300),
-                  Container(color: Colors.yellow, height: 400),
-                  Container(color: Colors.deepPurpleAccent, height: 500),
+                  Container(color: Colors.blue, height: 200),
+                  Container(color: Colors.yellow, height: 200),
+                  Container(color: Colors.deepPurpleAccent, height: 200),
                 ],
               ),
             ),
